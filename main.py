@@ -12,7 +12,7 @@ class MainApp(App):
 
         main_layout = BoxLayout(orientation = "vertical")
         self.solution = TextInput(background_color = "pink", foreground_color = "white",
-                                  multiline=False, halign="right", font_size=55, readonly=True)
+                                  multiline=False, halign="right", font_size=150, readonly=True)
         
         main_layout.add_widget(self.solution)
         buttons = [
@@ -27,7 +27,7 @@ class MainApp(App):
             h_layout = BoxLayout()
             for label in row:
                 button = Button(
-                    text = label, font_size = 30, background_color="gray",
+                    text = label, font_size = 80, background_color="gray",
                     pos_hint={"center_x": 0.5, "center_y": 0.5},
 
                 )
@@ -36,7 +36,7 @@ class MainApp(App):
             main_layout.add_widget(h_layout)
         
         equal_button = Button(
-            text = "=", font_size = 30, background_color="gray",
+            text = "=", font_size = 80, background_color="gray",
             pos_hint={"center_x": 0.5, "center_y": 0.5},
         )
         equal_button.bind(on_press=self.on_solution)
